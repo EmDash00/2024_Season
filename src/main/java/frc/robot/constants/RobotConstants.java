@@ -4,11 +4,10 @@ import com.revrobotics.CANSparkBase.IdleMode;
 
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
-import edu.wpi.first.math.util.Units;
 
 //IDs and stuff
 public final class RobotConstants {
-    public static final class NeoMotorConstants {
+    public static final class NeoMotor {
         public static final double kFreeSpeedRpm = 5676;
     }
     public static final class DriveConstants {
@@ -21,17 +20,17 @@ public final class RobotConstants {
 
         public static final double kDriveDeadband = 0.06;
 
-        public static final int kFrontLeftDrivingCanId = 6;
-        public static final int kFrontLeftTurningCanId = 5;
+        public static final int kFrontLeftDrivingCanId = -1;
+        public static final int kFrontLeftTurningCanId = -2;
 
-        public static final int kFrontRightDrivingCanId = 8;
-        public static final int kFrontRightTurningCanId = 7;
+        public static final int kFrontRightDrivingCanId = -3;
+        public static final int kFrontRightTurningCanId = -4;
 
-        public static final int kRearLeftDrivingCanId = 4;
-        public static final int kRearLeftTurningCanId = 3;
+        public static final int kRearLeftDrivingCanId = -5;
+        public static final int kRearLeftTurningCanId = -6;
 
-        public static final int kRearRightDrivingCanId = 2;
-        public static final int kRearRightTurningCanId = 1;
+        public static final int kRearRightDrivingCanId = -7;
+        public static final int kRearRightTurningCanId = -8;
 
         public static final int kGyroId = 15;
 
@@ -58,7 +57,7 @@ public final class RobotConstants {
             public static final double kRotationalSlewRate = 90; // percent per second (1 = 100%)
 
         }
-
+    
         //update these constants when we actually test this on the robot
         public static final class SwerveModuleConstants {
             // The MAXSwerve module can be configured with one of three pinion gears: 12T, 13T, or 14T.
@@ -71,7 +70,7 @@ public final class RobotConstants {
             public static final boolean kTurningEncoderInverted = true;
 
             // Calculations required for driving motor conversion factors and feed forward
-            public static final double kDrivingMotorFreeSpeedRps = NeoMotorConstants.kFreeSpeedRpm / 60;
+            public static final double kDrivingMotorFreeSpeedRps = NeoMotor.kFreeSpeedRpm / 60;
             public static final double kWheelDiameterMeters = 0.0762;
             public static final double kWheelCircumferenceMeters = kWheelDiameterMeters * Math.PI;
             // 45 teeth on the wheel's bevel gear, 22 teeth on the first-stage spur gear, 15 teeth on the bevel pinion
