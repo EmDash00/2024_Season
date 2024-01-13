@@ -22,10 +22,6 @@ import com.ctre.phoenix6.hardware.Pigeon2;
 
 
 public class Drivetrain extends SubsystemBase {
-<<<<<<< HEAD
-  /** Creates a new ExampleSubsystem. */
-  public Drivetrain() {}
-=======
 
   // Create MAXSwerveModules
   private final MAXSwerveModule m_frontLeft;
@@ -60,22 +56,22 @@ public class Drivetrain extends SubsystemBase {
     m_frontLeft = new MAXSwerveModule(
     DriveConstants.kFrontLeftDrivingCanId,
     DriveConstants.kFrontLeftTurningCanId,
-    DriveConstants.kFrontLeftChassisAngularOffset);
+    DriveConfig.kFrontLeftChassisAngularOffset);
 
     m_frontRight = new MAXSwerveModule(
     DriveConstants.kFrontRightDrivingCanId,
     DriveConstants.kFrontRightTurningCanId,
-    DriveConstants.kFrontRightChassisAngularOffset);
+    DriveConfig.kFrontRightChassisAngularOffset);
 
     m_rearLeft = new MAXSwerveModule(
     DriveConstants.kRearLeftDrivingCanId,
     DriveConstants.kRearLeftTurningCanId,
-    DriveConstants.kBackLeftChassisAngularOffset);
+    DriveConfig.kBackLeftChassisAngularOffset);
 
     m_rearRight = new MAXSwerveModule(
     DriveConstants.kRearRightDrivingCanId,
     DriveConstants.kRearRightTurningCanId,
-    DriveConstants.kBackRightChassisAngularOffset);
+    DriveConfig.kBackRightChassisAngularOffset);
 
     m_gyro = new Pigeon2(DriveConstants.kGyroId);
 
@@ -100,7 +96,6 @@ public class Drivetrain extends SubsystemBase {
     powerDistribution.clearStickyFaults();
     SmartDashboard.putNumber("driveVelocity", 0);
   }
->>>>>>> 4cb4d8d (implemented drivetrain subsystem and basic drive command functionality from last year)
 
   @Override
   public void periodic() {
