@@ -22,7 +22,6 @@ import com.ctre.phoenix6.hardware.Pigeon2;
 
 
 public class Drivetrain extends SubsystemBase {
-
   // Create MAXSwerveModules
   private final MAXSwerveModule m_frontLeft;
   private final MAXSwerveModule m_frontRight;
@@ -252,7 +251,7 @@ public class Drivetrain extends SubsystemBase {
         ySpeedCommanded = ySpeed;
         currentRotation = rot;
     }
-    
+
     // Adjust input based on max speed
     double xSpeedDelivered =
         xSpeedCommanded * DriveConfig.kMaxSpeedMetersPerSecond;
